@@ -6,6 +6,7 @@ public class Main {
     public static void main(String[] args) throws InterruptedException {
         Scanner scanner = new Scanner(System.in);
 
+
         int start1 = scanner.nextInt();
         int end1 = scanner.nextInt();
 
@@ -13,8 +14,11 @@ public class Main {
         int end2 = scanner.nextInt();
 
         RangeAdder adder1 = new RangeAdder(start1, end1);
+        adder1.start();
+        adder1.join();
         RangeAdder adder2 = new RangeAdder(start2, end2);
-
+        adder2.start();
+        adder2.join();
         long partialSum1 = adder1.getSum();
         long partialSum2 = adder2.getSum();
 
